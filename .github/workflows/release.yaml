@@ -1,32 +1,20 @@
-name: Deploy to Railway
+name: Releases
 
-on:
+on: 
   push:
-    branches: [main]
+    tags:
+    - 'release/*'
 
 jobs:
-  deploy:
+
+  build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Use Node 12
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-
-      - name: Install packages
-        run: yarn install --frozen-lockfile
-
-      - name: Run tests
-        run: yarn test
-
-      - name: Install Railway
-        run: npm i -g @railway/cli
-
-      - name: Deploy
-        run: railway up
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+    - uses: actions/checkout@v2
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: "release.tar.gz,foo/*.txt"
+        bodyFile: "body.md"
+        token: ${{ secrets.YOUR_GITHUB_TOKEN }}
