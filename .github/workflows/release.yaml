@@ -67,12 +67,9 @@ jobs:
                   "fields":[
                     {
                         "type":"mrkdwn",
-                        "text":"Name:*\n@Name"
-                    },
-                    {
-                        "type":"mrkdwn",
-                        "text":"Metriculation:*\n@Metriculation:"                
-              }              
+                        "text":"Deployment:*\n@Deployment"
+                    } 
+              }           
             ]
           }
       env:
