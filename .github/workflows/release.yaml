@@ -56,7 +56,7 @@ jobs:
                 "fields":[
                   {
                       "type":"mrkdwn",
-                      "text":"*Email:*\n<${{ secrets.MY_GITHUB_URL }}|Fred Enriquez>"
+                      "text":"*Email:*\n<mailto:${{ secrets.MY_GITHUB_URL }}|Fred Enriquez>"
                   },
                   {
                       "type":"mrkdwn",
