@@ -4,8 +4,8 @@ name: Release and deploy todo
 # trigger (on event)
 on:
   push:
-    tags:
-    - "r1/*"
+    branches:
+    - "main"
 
 #jobs in the workflow
 jobs:
