@@ -37,39 +37,7 @@ jobs:
                   "text": "DipSA55 CI/CD Assignment Submission",
                   "emoji": true
                 }
-              },
-              {
-                "type":"section",
-                "fields":[
-                  {
-                      "type":"mrkdwn",
-                      "text":"Name:*\nName"
-                  },
-                  {
-                      "type":"mrkdwn",
-                      "text":"Metriculation:*\nMetriculation:"
-                  }
-                ]
-              },
-              {
-                "type":"section",
-                "fields":[
-                  {
-                      "type":"mrkdwn",
-                      "text":"Email:*\nEmail"
-                  },
-                  {
-                      "type":"mrkdwn",
-                      "text":"Repository:*\nRepository:"                
-              },
-              {
-                "type":"section",
-                "fields":[
-                  {
-                      "type":"mrkdwn",
-                      "text":"Deployment:*\nDeployment"
-                  } 
-              }           
+              } 
             ]
           }
       env:
