@@ -2,6 +2,8 @@ name: Releases
 
 on: 
   push:
+    branches:
+    - 'release/*'
     tags:
     - 'release/*'
 
@@ -13,8 +15,6 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@v2
-    - uses: ncipollo/release-action@v1
+    - uses: ncipollo/release-action@v1.11.1
       with:
-        artifacts: "release.tar.gz,foo/*.txt"
-        bodyFile: "body.md"
         token: ${{ secrets.YOUR_GITHUB_TOKEN }}
