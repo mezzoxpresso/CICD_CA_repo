@@ -43,11 +43,11 @@ jobs:
                 "fields":[
                   {
                       "type":"mrkdwn",
-                      "text":"Name:*\nName"
+                      "text":"*Name:*\nName"
                   },
                   {
                       "type":"mrkdwn",
-                      "text":"Metriculation:*\nMetriculation:"
+                      "text":"*Metriculation:*\nMetriculation"
                   }
                 ]
               },
@@ -56,11 +56,11 @@ jobs:
                 "fields":[
                   {
                       "type":"mrkdwn",
-                      "text":"Email:*\nEmail"
+                      "text":"*Email:*\nEmail"
                   },
                   {
                       "type":"mrkdwn",
-                      "text":"Repository:*\nRepository:"
+                      "text":"*Repository:*\nRepository"
                   }
                 ]                
               },
@@ -69,7 +69,7 @@ jobs:
                 "fields":[
                   {
                       "type":"mrkdwn",
-                      "text":"Deployment:*\nDeployment"
+                      "text":"*Deployment:*\nDeployment"
                   } 
                 ]
               }           
