@@ -56,11 +56,11 @@ jobs:
                 "fields":[
                   {
                       "type":"mrkdwn",
-                      "text":"*Email:*\nEmail"
+                      "text":"*Email:*\n<example.com|Fred Enriquez>"
                   },
                   {
                       "type":"mrkdwn",
-                      "text":"*Repository:*\nRepository"
+                      "text":"*Repository:*\n<example.com|Fred Enriquez>"
                   }
                 ]                
               },
@@ -69,10 +69,19 @@ jobs:
                 "fields":[
                   {
                       "type":"mrkdwn",
-                      "text":"*Deployment:*\nDeployment"
+                      "text":"*Deployment:*\n<example.com|Fred Enriquez>"
                   } 
                 ]
-              }           
+              },
+              {
+                "type":"section",
+                "fields":[
+                  {
+                      "type":"mrkdwn",
+                      "text":"<example.com|Fred Enriquez>"
+                  }
+                ]
+              }       
             ]
           }
       env:
