@@ -1,5 +1,5 @@
 
-name: Release and deploy todo
+name: Release and deploy golang
 
 # trigger (on event)
 on: 
