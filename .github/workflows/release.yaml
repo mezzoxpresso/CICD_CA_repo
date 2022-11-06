@@ -1,27 +1,29 @@
-name: Release and deploy todo
-
-# trigger (on event)
 on:
   push:
-    branches:
-    - "release/*"
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
-#jobs in the workflow
+name: Create Release
+
 jobs:
-  release-and-deploy:
-  #job name
-  #OS that this job will be running on
+  build:
+    name: Create Release
     runs-on: ubuntu-latest
-
-    #list of steps to perform the task
     steps:
-    - name: echo the branch name
-      run: echo "curent branch - $ {{github.ref_name}}"
-    - name: checkout the branch
-      uses: actions/checkout@v3
-      with:
-        ref: ${{github.ref_name}}
-    - name: release the branch
-      uses: ncipollo/release-action@v1.11.1
-      with:
-        token: ${{secrets.YOUR_GITHUB_TOKEN}}
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.YOUR_GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Changes in this Release
+            - First Change
+            - Second Change
+          draft: false
+          prerelease: false
