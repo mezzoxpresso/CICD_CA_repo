@@ -1,6 +1,6 @@
-name: Releases
+name: Release
 
-on: 
+on:
   push:
     branches:
     - 'release/*'
@@ -15,6 +15,6 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@v2
-    - uses: ncipollo/release-action@v1.11.1
+    - uses: mcipollo/release-action@v1.11.1
       with:
-        token: ${{ secrets.YOUR_GITHUB_TOKEN }}
+        token: ${{ secrets.YOUR_GITHUB_TOKEN}}
