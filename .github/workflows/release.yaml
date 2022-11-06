@@ -56,11 +56,11 @@ jobs:
                 "fields":[
                   {
                       "type":"mrkdwn",
-                      "text":"*Email:*\n<example.com|Fred Enriquez>"
+                      "text":"*Email:*\n< ${{ secrets.MY_GITHUB_URL }}|Fred Enriquez>"
                   },
                   {
                       "type":"mrkdwn",
-                      "text":"*Repository:*\n<example.com|Fred Enriquez>"
+                      "text":"*Repository:*\n< ${{ secrets.MY_GITHUB_URL }}|Fred Enriquez>"
                   }
                 ]                
               },
@@ -69,7 +69,7 @@ jobs:
                 "fields":[
                   {
                       "type":"mrkdwn",
-                      "text":"*Deployment:*\n<example.com|Fred Enriquez>"
+                      "text":"*Deployment:*\n< ${{ secrets.MY_GITHUB_URL }}|Fred Enriquez>"
                   } 
                 ]
               },
@@ -78,7 +78,7 @@ jobs:
                 "fields":[
                   {
                       "type":"mrkdwn",
-                      "text":"<example.com|Fred Enriquez>"
+                      "text":"< ${{ secrets.MY_GITHUB_URL }}|Fred Enriquez>"
                   }
                 ]
               }       
