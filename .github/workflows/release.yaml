@@ -34,10 +34,45 @@ jobs:
                 "type": "header",
                 "text": {
                   "type": "plain_text",
-                  "text": "New request@",
+                  "text": "DipSA55 CI/CD Assignment Submission",
                   "emoji": true
                 }
-              }
+              },
+              {
+                  "type":"section",
+                  "fields":[
+                    {
+                        "type":"mrkdwn",
+                        "text":"Name:*\n@Name"
+                    },
+                    {
+                        "type":"mrkdwn",
+                        "text":"Metriculation:*\n@Metriculation:"
+                    }
+                  ]
+              },
+              {
+                  "type":"section",
+                  "fields":[
+                    {
+                        "type":"mrkdwn",
+                        "text":"Name:*\n@Name"
+                    },
+                    {
+                        "type":"mrkdwn",
+                        "text":"Metriculation:*\n@Metriculation:"                
+              },
+              {
+                  "type":"section",
+                  "fields":[
+                    {
+                        "type":"mrkdwn",
+                        "text":"Name:*\n@Name"
+                    },
+                    {
+                        "type":"mrkdwn",
+                        "text":"Metriculation:*\n@Metriculation:"                
+              },              
             ]
           }
       env:
